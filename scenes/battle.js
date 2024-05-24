@@ -174,6 +174,7 @@ export function makeBattle(p) {
     },
     endCleanup(){
       console.log("battle has ended. cleaning up")
+      this.dialogBox.clearText();
     },
     update() {
       if (this.currentState === states.introNpc) {
