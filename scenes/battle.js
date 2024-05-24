@@ -286,7 +286,7 @@ export function makeBattle(p) {
           this.currentState = states.winnerDeclared;
 
           setTimeout(function(){
-            endCleanup();
+            endCleanup(); // just end cleanup
           }, 6000)
 
           // return;
