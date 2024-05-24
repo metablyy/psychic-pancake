@@ -291,8 +291,8 @@ export function makeBattle(p) {
           this.currentState = states.winnerDeclared;
 
           setTimeout(function(){
-            endCleanup(); // just end cleanup
-          }, 6000)
+            this.endCleanup(); // just end cleanup
+          }, 5000)
 
           // return;
         }
@@ -308,8 +308,8 @@ export function makeBattle(p) {
           p.image(this.battleBackgroundImage, 0, 0);
           
           setTimeout(function(){
-            endCleanup();
-          }, 6000)
+            this.endCleanup();
+          }, 5000)
           
         }
       }
