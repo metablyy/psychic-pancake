@@ -291,7 +291,7 @@ export function makeBattle(p) {
 
           setTimeout(function(){
             this.endCleanup();
-          }, 3000)
+          }, 6000)
 
           return;
         }
@@ -308,7 +308,7 @@ export function makeBattle(p) {
           
           setTimeout(function(){
             this.endCleanup();
-          }, 3000)
+          }, 6000)
           
         }
       }
