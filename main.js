@@ -3,7 +3,7 @@ import { debugMode } from "./entities/debugMode.js";
 import { makeWorld } from "./scenes/world.js";
 import { makeBattle } from "./scenes/battle.js";
 
-console.log("hello world")
+console.log("hello world") // yes
 
 new p5((p) => {
   let font;
