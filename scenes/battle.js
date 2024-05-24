@@ -172,6 +172,9 @@ export function makeBattle(p) {
       );
       this.dialogBox.setVisibility(true);
     },
+    endCleanup(){
+      console.log("battle has ended. cleaning up")
+    },
     update() {
       if (this.currentState === states.introNpc) {
         this.npc.x += 0.5 * p.deltaTime;
@@ -284,9 +287,7 @@ export function makeBattle(p) {
             `${this.npcPokemon.name} fainted ! You won !`
           );
           this.currentState = states.winnerDeclared;
-          p.clear();
-          p.background(0);
-          p.image(this.battleBackgroundImage, 0, 0);
+          this.endCleanup();
           return;
         }
 
@@ -299,6 +300,7 @@ export function makeBattle(p) {
           p.clear();
           p.background(0);
           p.image(this.battleBackgroundImage, 0, 0);
+          this.endCleanup();
         }
       }
 
