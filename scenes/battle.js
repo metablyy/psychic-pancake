@@ -172,10 +172,6 @@ export function makeBattle(p) {
       );
       this.dialogBox.setVisibility(true);
     },
-    endCleanup(){
-      console.log("battle has ended. cleaning up")
-      this.dialogBox.clearText();
-    },
     update() {
       if (this.currentState === states.introNpc) {
         this.npc.x += 0.5 * p.deltaTime;
@@ -293,7 +289,7 @@ export function makeBattle(p) {
             this.endCleanup();
           }, 6000)
 
-          return;
+          // return;
         }
 
         if (this.playerPokemon.isFainted) {
@@ -315,6 +311,10 @@ export function makeBattle(p) {
 
       p.rect(0, 288, 512, 200);
       this.dialogBox.draw();
+    },
+    endCleanup(){
+      console.log("battle has ended. cleaning up")
+      this.dialogBox.clearText();
     },
     onKeyPressed(keyEvent) {
       if (this.currentState === states.playerTurn) {
