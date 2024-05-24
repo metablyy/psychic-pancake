@@ -46,6 +46,11 @@ function makeDataBox(x, y, nameX, nameY, healthBarX, healthBarY) {
   };
 }
 
+function endCleanup(){
+  console.log("battle has ended. cleaning up")
+  this.dialogBox.clearText();
+}
+
 export function makeBattle(p) {
   return {
     dialogBox: makeDialogBox(p, 0, 288),
@@ -311,10 +316,6 @@ export function makeBattle(p) {
 
       p.rect(0, 288, 512, 200);
       this.dialogBox.draw();
-    },
-    endCleanup(){
-      console.log("battle has ended. cleaning up")
-      this.dialogBox.clearText();
     },
     onKeyPressed(keyEvent) {
       if (this.currentState === states.playerTurn) {
