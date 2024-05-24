@@ -210,6 +210,7 @@ export function makeBattle(p) {
       this.dialogBox.update();
     },
     draw() {
+      console.log(this)
       p.clear();
       p.background(0);
       p.image(this.battleBackgroundImage, 0, 0);
