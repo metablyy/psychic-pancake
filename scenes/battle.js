@@ -47,8 +47,8 @@ function makeDataBox(x, y, nameX, nameY, healthBarX, healthBarY) {
 }
 
 function endCleanup(){
-  console.log("battle has ended. cleaning up")
-  this.dialogBox.clearText();
+    console.log("battle has ended. cleaning up");
+    this.dialogBox.clearText();
 }
 
 export function makeBattle(p) {
@@ -291,7 +291,7 @@ export function makeBattle(p) {
           this.currentState = states.winnerDeclared;
 
           setTimeout(function(){
-            this.endCleanup();
+            endCleanup;
           }, 5000)
 
           // return;
@@ -308,7 +308,7 @@ export function makeBattle(p) {
           p.image(this.battleBackgroundImage, 0, 0);
           
           setTimeout(function(){
-            this.endCleanup();
+            endCleanup;
           }, 5000)
           
         }
