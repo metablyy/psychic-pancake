@@ -284,7 +284,9 @@ export function makeBattle(p) {
             `${this.npcPokemon.name} fainted ! You won !`
           );
           this.currentState = states.winnerDeclared;
-          this.update()
+          p.clear();
+          p.background(0);
+          p.image(this.battleBackgroundImage, 0, 0);
           return;
         }
 
@@ -294,7 +296,9 @@ export function makeBattle(p) {
             `${this.playerPokemon.name} fainted ! You lost !`
           );
           this.currentState = states.winnerDeclared;
-          this.update()
+          p.clear();
+          p.background(0);
+          p.image(this.battleBackgroundImage, 0, 0);
         }
       }
 
