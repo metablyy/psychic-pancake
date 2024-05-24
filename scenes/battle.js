@@ -46,10 +46,7 @@ function makeDataBox(x, y, nameX, nameY, healthBarX, healthBarY) {
   };
 }
 
-function endCleanup(){
-    console.log("battle has ended. cleaning up");
-    this.dialogBox.clearText();
-}
+
 
 export function makeBattle(p) {
   return {
@@ -143,6 +140,12 @@ export function makeBattle(p) {
       );
       this.dialogBox.load();
     },
+
+    endCleanup(){
+      console.log("battle has ended. cleaning up");
+      this.dialogBox.clearText();
+    },
+    
     setup() {
       this.dialogBox.displayText(
         "Mark the gentleman wants to battle !",
